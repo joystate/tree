@@ -2,6 +2,7 @@ import pygame, sys
 from pygame.locals import *
 import random
 import math
+import time
 
   
 pygame.init()
@@ -105,6 +106,12 @@ while True:
             branch.grow()
             if branch.counter > branch.length:
                 branches.append(branch.split())
+    if len(braches) == 2500:
+      screen = pygame.display.set_mode((screen_widht, screen_height), 0, 32)
+      screen.fill(BLUE)
+      branches = []
+      branches.append(Branch(500, 550, 0, -2, 75))
+      
        
     pygame.display.update()
     fpsClock.tick(FPS)
