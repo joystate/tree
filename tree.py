@@ -107,6 +107,7 @@ while True:
             if branch.counter > branch.length:
                 branches.append(branch.split())
     if len(braches) == 2500:
+      time.sleep(2)
       screen = pygame.display.set_mode((screen_widht, screen_height), 0, 32)
       screen.fill(BLUE)
       branches = []
